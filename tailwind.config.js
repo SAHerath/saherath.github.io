@@ -1,3 +1,5 @@
+import { color } from 'framer-motion'
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -5,7 +7,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        nunito: ['nunito', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
+
