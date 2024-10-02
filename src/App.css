@@ -1,42 +1,41 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+	height: 100vh;
+	background: radial-gradient(farthest-side at 40% 50%, #21add0,#121599,#5d089b,#95033f,#8C6406);
+  background-size: 400% 600%;
+  animation: gradient-animation 60s ease-in-out infinite;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes gradient-animation {
+  0% {
+    background-position: 10% 40%;
   }
-  to {
-    transform: rotate(360deg);
+  12% {
+    background-position: 50% 80%;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  24% {
+    background-position: 80% 60%;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  36% {
+    background-position: 50% 20%;
+  }
+  48% {
+    background-position: 30% 0%;
+  }
+  64% {
+    background-position: 10% 80%;
+  }
+  76% {
+    background-position: 100% 70%;
+  }
+  88% {
+    background-position: 60% 30%;
+  }
+  100% {
+    background-position: 10% 40%;
+  }
 }
