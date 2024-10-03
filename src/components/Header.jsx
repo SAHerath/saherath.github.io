@@ -7,7 +7,7 @@ const Header = () => {
      
     return ( 
         <header className="fixed w-full z-40 bg-gradient-to-b from-gray-800 from-5% backdrop-blur-lg shadow-xl">
-            <nav className="font-nunito text-slate-300 cursor-default">
+            <nav className="font-nunito text-slate-300">
                 <div className="h-16 flex justify-between items-strech px-4">
                     <h1 className="self-center">
                         <a href="" className="hover:shadow-glow">MyLogo</a>
