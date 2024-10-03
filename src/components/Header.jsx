@@ -12,15 +12,23 @@ const Header = () => {
                     <h1 className="self-center">
                         <a href="" className="hover:shadow-glow">MyLogo</a>
                     </h1>
-                    <ul className="hidden sm:flex items-center gap-3">
-                        <li className="w-20 md:w-24 self-stretch content-center rounded-t-lg text-white hover:border-b-2">Home</li>
-                        <li className="w-20 md:w-24 self-stretch content-center rounded-t-lg hover:border-b-2">About</li>
-                        <li className="w-20 md:w-24 self-stretch content-center rounded-t-lg hover:border-b-2">Projects</li>
-                        <li className="w-20 md:w-24 self-stretch content-center rounded-t-lg hover:border-b-2">Contact</li>
+                    <ul className="hidden sm:flex items-center">
+                        <li>
+                            <a className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2 text-white" href="">Home</a>
+                        </li>
+                        <li>
+                            <a className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2" href="">About</a>
+                        </li>
+                        <li>
+                            <a className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2" href="">Projects</a>
+                        </li>
+                        <li>
+                            <a className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2" href="">Contact</a>
+                        </li>
                     </ul>
                     <ul className="flex self-center gap-3 ">
                         <li>
-                            <a className="px-4 py-2 rounded-md cursor-pointer text-white bg-green-600 hover:text-black hover:shadow-glow-green" onClick={handleResume}>Resume</a>
+                            <a onClick={handleResume} className="px-4 py-2 rounded-md cursor-pointer text-white bg-green-600 hover:text-black hover:shadow-glow-green">Resume</a>
                         </li>
                         <li className="sm:hidden">
                             <a href="" className="cursor-pointer text-2xl group">
@@ -33,11 +41,19 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="pb-2 sm:hidden">
-                    <ul className="flex flex-col items-start px-8 sm:px-16 text-lg">
-                        <li className="w-full py-1 rounded-full hover:bg-gradient-to-t from-black text-white">Home</li>
-                        <li className="w-full py-1 rounded-full hover:bg-gradient-to-t from-black">About</li>
-                        <li className="w-full py-1 rounded-full hover:bg-gradient-to-t from-black">Projects</li>
-                        <li className="w-full py-1 rounded-full hover:bg-gradient-to-t from-black">Contact</li>
+                    <ul className="flex flex-col items-stretch px-8 sm:px-16 text-lg">
+                        <li>
+                            <a className="block py-1 rounded-full hover:bg-gradient-to-t from-black text-white" href="">Home</a>
+                        </li>
+                        <li>
+                            <a className="block py-1 rounded-full hover:bg-gradient-to-t from-black" href="">About</a>
+                        </li>
+                        <li>
+                            <a className="block py-1 rounded-full hover:bg-gradient-to-t from-black" href="">Projects</a>
+                        </li>
+                        <li>
+                            <a className="block py-1 rounded-full hover:bg-gradient-to-t from-black" href="">Contact</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
