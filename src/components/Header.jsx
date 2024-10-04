@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {PiListBold, PiXBold} from "react-icons/pi";
 
 const Header = () => {
@@ -12,15 +13,23 @@ const Header = () => {
                     <h1 className="self-center">
                         <a href="" className="hover:shadow-glow">MyLogo</a>
                     </h1>
-                    <ul className="hidden sm:flex items-center gap-3">
-                        <li className="w-20 md:w-24 self-stretch content-center rounded-t-lg text-white hover:border-b-2">Home</li>
-                        <li className="w-20 md:w-24 self-stretch content-center rounded-t-lg hover:border-b-2">About</li>
-                        <li className="w-20 md:w-24 self-stretch content-center rounded-t-lg hover:border-b-2">Projects</li>
-                        <li className="w-20 md:w-24 self-stretch content-center rounded-t-lg hover:border-b-2">Contact</li>
+                    <ul className="hidden sm:flex items-center">
+                        <li>
+                            <Link className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2 text-white" to="/">Home</Link>
+                        </li>
+                        <li>
+                            <Link className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2" to="/about">About</Link>
+                        </li>
+                        <li>
+                            <Link className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2" to="/projects">Projects</Link>
+                        </li>
+                        <li>
+                            <Link className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2" to="/contact">Contact</Link>
+                        </li>
                     </ul>
                     <ul className="flex self-center gap-3 ">
                         <li>
-                            <a className="px-4 py-2 rounded-md cursor-pointer text-white bg-green-600 hover:text-black hover:shadow-glow-green" onClick={handleResume}>Resume</a>
+                            <a onClick={handleResume} className="px-4 py-2 rounded-md cursor-pointer text-white bg-green-600 hover:text-black hover:shadow-glow-green">Resume</a>
                         </li>
                         <li className="sm:hidden">
                             <a href="" className="cursor-pointer text-2xl group">
@@ -33,11 +42,19 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="pb-2 sm:hidden">
-                    <ul className="flex flex-col items-start px-8 sm:px-16 text-lg">
-                        <li className="w-full py-1 rounded-full hover:bg-gradient-to-t from-black text-white">Home</li>
-                        <li className="w-full py-1 rounded-full hover:bg-gradient-to-t from-black">About</li>
-                        <li className="w-full py-1 rounded-full hover:bg-gradient-to-t from-black">Projects</li>
-                        <li className="w-full py-1 rounded-full hover:bg-gradient-to-t from-black">Contact</li>
+                    <ul className="flex flex-col items-stretch px-8 sm:px-16 text-lg">
+                        <li>
+                            <Link className="block py-1 rounded-full hover:bg-gradient-to-t from-black text-white" to="">Home</Link>
+                        </li>
+                        <li>
+                            <Link className="block py-1 rounded-full hover:bg-gradient-to-t from-black" to="">About</Link>
+                        </li>
+                        <li>
+                            <Link className="block py-1 rounded-full hover:bg-gradient-to-t from-black" to="">Projects</Link>
+                        </li>
+                        <li>
+                            <Link className="block py-1 rounded-full hover:bg-gradient-to-t from-black" to="">Contact</Link>
+                        </li>
                     </ul>
                 </div>
             </nav>

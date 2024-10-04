@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
+
 import "./App.css";   
 
 function App() {
@@ -12,10 +13,12 @@ function App() {
     <>
       <Header />
 
-      <Routes>
-        <Route path="/sah-portfolio" element={<Home />} />
-        <Route path="/sah-portfolio/about" element={<About />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </main>
 
 
     </>
