@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {PiListBold, PiXBold} from "react-icons/pi";
 
 const Header = () => {
@@ -14,16 +15,16 @@ const Header = () => {
                     </h1>
                     <ul className="hidden sm:flex items-center">
                         <li>
-                            <a className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2 text-white" href="">Home</a>
+                            <Link className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2 text-white" to="/">Home</Link>
                         </li>
                         <li>
-                            <a className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2" href="">About</a>
+                            <Link className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2" to="/about">About</Link>
                         </li>
                         <li>
-                            <a className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2" href="">Projects</a>
+                            <Link className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2" to="/projects">Projects</Link>
                         </li>
                         <li>
-                            <a className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2" href="">Contact</a>
+                            <Link className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2" to="/contact">Contact</Link>
                         </li>
                     </ul>
                     <ul className="flex self-center gap-3 ">
@@ -43,16 +44,16 @@ const Header = () => {
                 <div className="pb-2 sm:hidden">
                     <ul className="flex flex-col items-stretch px-8 sm:px-16 text-lg">
                         <li>
-                            <a className="block py-1 rounded-full hover:bg-gradient-to-t from-black text-white" href="">Home</a>
+                            <Link className="block py-1 rounded-full hover:bg-gradient-to-t from-black text-white" to="">Home</Link>
                         </li>
                         <li>
-                            <a className="block py-1 rounded-full hover:bg-gradient-to-t from-black" href="">About</a>
+                            <Link className="block py-1 rounded-full hover:bg-gradient-to-t from-black" to="">About</Link>
                         </li>
                         <li>
-                            <a className="block py-1 rounded-full hover:bg-gradient-to-t from-black" href="">Projects</a>
+                            <Link className="block py-1 rounded-full hover:bg-gradient-to-t from-black" to="">Projects</Link>
                         </li>
                         <li>
-                            <a className="block py-1 rounded-full hover:bg-gradient-to-t from-black" href="">Contact</a>
+                            <Link className="block py-1 rounded-full hover:bg-gradient-to-t from-black" to="">Contact</Link>
                         </li>
                     </ul>
                 </div>
