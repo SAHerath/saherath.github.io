@@ -46,19 +46,20 @@ const Header = () => {
                 <div className="pb-2 sm:hidden">
                     <ul className="flex flex-col items-stretch px-8 sm:px-16 text-lg">
                         <li>
-                            <Link className="block py-1 rounded-full hover:bg-gradient-to-t from-black text-white" to="">Home</Link>
+                            <LinkScroll to="home" spy={true} smooth={true} duration={500} className="block py-1 rounded-full hover:bg-gradient-to-t from-black text-white">Home</LinkScroll>
                         </li>
                         <li>
-                            <Link className="block py-1 rounded-full hover:bg-gradient-to-t from-black" to="">About</Link>
+                            <LinkScroll to="about" spy={true} smooth={true} duration={500} className="block py-1 rounded-full hover:bg-gradient-to-t from-black">About</LinkScroll>
                         </li>
                         <li>
-                            <Link className="block py-1 rounded-full hover:bg-gradient-to-t from-black" to="">Projects</Link>
+                            <LinkScroll to="projects" spy={true} smooth={true} duration={500} className="block py-1 rounded-full hover:bg-gradient-to-t from-black">Projects</LinkScroll>
                         </li>
                         <li>
-                            <Link className="block py-1 rounded-full hover:bg-gradient-to-t from-black" to="">Contact</Link>
+                            <LinkScroll to="contact" spy={true} smooth={true} duration={500} className="block py-1 rounded-full hover:bg-gradient-to-t from-black">Contact</LinkScroll>
                         </li>
                     </ul>
                 </div>
+
             </nav>
 
         </header>
