@@ -1,7 +1,9 @@
-const About = () => {
-  return ( 
+import React from 'react'
+
+const Contact = () => {
+  return (
     <>
-      <h1 className="text-xl text-white p-16">About Me</h1>
+      <h1 className="text-xl text-white p-16">Contact Me</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porttitor iaculis eros ut laoreet. Phasellus blandit lorem sit amet nisl luctus ullamcorper. Praesent suscipit semper sodales. Aenean ac magna massa. Proin maximus scelerisque nibh, quis auctor risus dapibus vel. Aliquam fringilla porta enim, eget sagittis metus scelerisque sit amet. Suspendisse tincidunt vestibulum orci, eu porta turpis imperdiet bibendum. Fusce suscipit ac eros aliquam tempor. Mauris dictum, ipsum non mollis tincidunt, nibh nunc malesuada neque, sed tempor velit neque ut nibh. 
       </p>
@@ -15,7 +17,7 @@ const About = () => {
         In eu est ut massa scelerisque laoreet id eu lorem. Pellentesque laoreet mollis arcu, eu gravida dolor. In diam erat, aliquet sit amet vestibulum id, ultricies eu felis. Nunc ultricies lacus felis, at rhoncus justo gravida ac. Sed dui nulla, convallis vel finibus ut, varius in dolor. Aliquam eu semper felis. In pulvinar tempor velit nec tincidunt. Proin lectus libero, volutpat quis consequat eu, imperdiet sed nunc. Nullam at lacus eget elit tincidunt tempus. Praesent nec justo at dui posuere ornare sit amet eu ligula. Cras ac justo sollicitudin, fermentum libero vel, dignissim libero. 
       </p>
     </>
-   );
+  )
 }
- 
-export default About;
+
+export default Contact;
