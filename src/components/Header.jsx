@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link as LinkRouter } from "react-router-dom";
+import { Link as LinkScroll } from "react-scroll";
 import {PiListBold, PiXBold} from "react-icons/pi";
 
 const Header = () => {
+
     const handleResume = () => {
         console.log("hello handleResume!");
     }
@@ -11,20 +13,20 @@ const Header = () => {
             <nav className="font-nunito text-slate-300">
                 <div className="h-16 flex justify-between items-strech px-4">
                     <h1 className="self-center">
-                        <a href="" className="hover:shadow-glow">MyLogo</a>
+                        <a href="" className=" hover:shadow-glow">MyLogo</a>
                     </h1>
                     <ul className="hidden sm:flex items-center">
                         <li>
-                            <Link className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2 text-white" to="/">Home</Link>
+                            <LinkScroll activeClass="active" to="home" spy={true} smooth={true} duration={500} offset={-50} className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2 text-white">Home</LinkScroll>
                         </li>
                         <li>
-                            <Link className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2" to="/about">About</Link>
+                            <LinkScroll className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2" to="about">About</LinkScroll>
                         </li>
                         <li>
-                            <Link className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2" to="/projects">Projects</Link>
+                            <LinkScroll className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2" to="projects">Projects</LinkScroll>
                         </li>
                         <li>
-                            <Link className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2" to="/contact">Contact</Link>
+                            <LinkScroll className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2" to="contact">Contact</LinkScroll>
                         </li>
                     </ul>
                     <ul className="flex self-center gap-3 ">
