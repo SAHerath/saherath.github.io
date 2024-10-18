@@ -2,7 +2,8 @@ import React, {useState} from "react";
 import { Link as LinkRouter } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
 import {PiListBold, PiXBold} from "react-icons/pi";
-import Logo from "/logo/AH.svg";
+import Logo from "./Logo";
+// import Logo from "/logo/AH.svg";
 
 const Header = () => {
 
@@ -21,7 +22,8 @@ const Header = () => {
                 <div className="h-16 flex justify-between items-strech px-4">
                     <h1 className="self-center">
                         <a href="" className=" hover:shadow-glow">
-                            <img src={Logo} className="block h-10 text-white" alt="My Logo" />
+                            <Logo />
+                            {/* <img src={Logo} className="block h-10 text-white" alt="My Logo" /> */}
                         </a>
                     </h1>
                     <ul className="hidden sm:flex items-center">
