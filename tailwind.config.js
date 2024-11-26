@@ -39,7 +39,15 @@ export default {
           '0 10px 20px rgba(22, 163, 74, 0.8)'
         ]
       },
-
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-5deg)' },
+          '50%': { transform: 'rotate(25deg)' },
+        }
+      },
+      animation: {
+        wiggle: 'wiggle 2s ease-in-out infinite',
+      },
     },
   },
   plugins: [],
