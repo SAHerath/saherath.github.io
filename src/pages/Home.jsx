@@ -1,6 +1,6 @@
 import {PiHandWaving } from "react-icons/pi";
 import ProfileImg from "../assets/images/avatar3.png";
-
+import Typewriter from 'typewriter-effect';
 
 const Home = () => {
   return ( 
@@ -12,8 +12,16 @@ const Home = () => {
             <h1 className="font-semibold">Hello</h1>
             <PiHandWaving className="animate-wiggle"/>
           </div>
-          <div className="py-4">
+          <div className="py-4 md:pr-8">
             <h2 className="text-3xl sm:text-5xl">Im Anuradha Herath</h2>
+          </div>
+          <div className="pt-10 text-2xl sm:text-3xl">
+            <Typewriter options={{
+                        strings: ['Full-Stack Developer', 'DevOps Engineer', 'Embedded Systems Engineer', 'Hardware Design Engineer', 'Electronics R&D Engineer', 'IoT Systems Engineer', 'Freelancer'],
+                        autoStart: true,
+                        loop: true,
+                      }}
+            />
           </div>
         </div>
 
