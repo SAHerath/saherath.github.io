@@ -18,7 +18,13 @@
         animation: gradient-animation 60s ease-in-out infinite;
         text-align: center;
     }
-    
+
+}
+
+@layer utilities {
+  .activelink {
+    color: white;
+  }
 }
 
 @font-face {
