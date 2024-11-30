@@ -22,22 +22,22 @@ const Header = () => {
                 <div className="h-16 flex justify-between items-strech px-4">
                     <h1 className="self-center">
                         <a href="" className=" hover:shadow-glow">
-                            <Logo />
+                            <Logo scale={0.18} animate={0}/>
                             {/* <img src={Logo} className="block h-10 text-white" alt="My Logo" /> */}
                         </a>
                     </h1>
                     <ul className="hidden sm:flex items-center">
                         <li>
-                            <LinkScroll activeClass="active" to="home" spy={true} smooth={true} duration={500} offset={-50} className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2 text-white">Home</LinkScroll>
+                            <LinkScroll to="home" activeClass="activelink" spy={true} smooth={true} duration={500} className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2">Home</LinkScroll>
                         </li>
                         <li>
-                            <LinkScroll className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2" to="about">About</LinkScroll>
+                            <LinkScroll to="about" activeClass="activelink" spy={true} smooth={true} duration={500} className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2">About</LinkScroll>
                         </li>
                         <li>
-                            <LinkScroll className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2" to="projects">Projects</LinkScroll>
+                            <LinkScroll to="projects" activeClass="activelink" spy={true} smooth={true} duration={500} className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2">Projects</LinkScroll>
                         </li>
                         <li>
-                            <LinkScroll className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2" to="contact">Contact</LinkScroll>
+                            <LinkScroll to="contact" activeClass="activelink" spy={true} smooth={true} duration={500} className="block w-20 md:w-24 py-5 rounded-t-lg hover:border-b-2">Contact</LinkScroll>
                         </li>
                     </ul>
                     <ul className="flex self-center gap-3 ">
