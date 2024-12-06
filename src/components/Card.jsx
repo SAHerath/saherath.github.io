@@ -1,4 +1,5 @@
 import React from "react";
+import Badge from "./Badge";
 
 const Card = ({ title, description, image, tags }) => {
   return (
@@ -8,25 +9,13 @@ const Card = ({ title, description, image, tags }) => {
       </div>
       <div className="flex flex-col sm:w-3/5 lg:w-full px-4">
         <h2 className="text-lg py-2">{title}</h2>
-        <p className="text-base text-justify">
-          {description}
-        </p>
+        <p className="text-base text-justify">{description}</p>
         <div className="flex flex-wrap gap-3 pt-4">
-          <span className="bg-gray-200 text-gray-800 text-xs font-normal px-2.5 py-1 rounded-full border border-black">
-          {tags[0]}
-          </span>
-          <span className="bg-gray-200 text-gray-800 text-xs font-normal px-2.5 py-1 rounded-full border border-black">
-          {tags[1]}
-          </span>
-          <span className="bg-gray-200 text-gray-800 text-xs font-normal px-2.5 py-1 rounded-full border border-black">
-          {tags[2]}
-          </span>
-          <span className="bg-gray-200 text-gray-800 text-xs font-normal px-2.5 py-1 rounded-full border border-black">
-          {tags[3]}
-          </span>
-          <span className="bg-gray-200 text-gray-800 text-xs font-normal px-2.5 py-1 rounded-full border border-black">
-          {tags[4]}
-          </span>
+          <Badge>{tags[0]}</Badge>
+          <Badge>{tags[1]}</Badge>
+          <Badge>{tags[2]}</Badge>
+          <Badge>{tags[3]}</Badge>
+          <Badge>{tags[4]}</Badge>
         </div>
       </div>
     </div>
