@@ -1,6 +1,6 @@
 import React from "react";
 import {PiHandWaving } from "react-icons/pi";
-import ProfileImg from "../assets/images/avatar3.png";
+import ProfileImg from "../assets/images/avatar.png";
 import Typewriter from 'typewriter-effect';
 
 const Home = () => {
