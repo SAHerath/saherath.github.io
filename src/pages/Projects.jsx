@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "../components/Card";
+import GitHubCalendar from 'react-github-calendar';
 import P1Img from "../assets/images/p1.png";
 import P2Img from "../assets/images/p2.png";
 import P3Img from "../assets/images/p3.png";
@@ -33,6 +34,10 @@ const Projects = () => {
             description={"Designed and assembled a custom PCB and developed embedded firmware in C to monitor air quality by measuring particulate matter, CO2, and other toxic gases. The system supports both wired and wireless connectivity via 4G, WiFi, and Ethernet. Data is visualized in real-time through a web interface, including alerts for critical conditions."}
             />
             
+        </div>
+        <div className="flex flex-col justify-center pt-12">
+          <h2 className="p-8 text-lg">My GitHub Activity</h2>
+          <GitHubCalendar username="SAHerath"  />
         </div>
       </div>
     </section>
