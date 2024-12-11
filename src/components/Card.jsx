@@ -8,8 +8,8 @@ const Card = ({ title, description, image, tags }) => {
         <img src={image} alt="project image" className="w-full h-full max-h-56 object-contain object-center"/>
       </div>
       <div className="flex flex-col sm:w-3/5 lg:w-full px-4">
-        <h2 className="text-lg py-2">{title}</h2>
-        <p className="text-base text-justify">{description}</p>
+        <h2 className="text-lg 3xl:text-xl py-2">{title}</h2>
+        <p className="text-base 3xl:text-lg text-justify">{description}</p>
         <div className="flex flex-wrap gap-3 pt-4">
           <Badge>{tags[0]}</Badge>
           <Badge>{tags[1]}</Badge>
