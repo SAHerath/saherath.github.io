@@ -1,22 +1,56 @@
-import React from 'react'
+import React from "react";
+import Logo from "../components/Logo";
+import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope} from "react-icons/fa";
 
 const Contact = () => {
+
   return (
-    <>
-      <h1 className="text-xl text-white p-16">Contact Me</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porttitor iaculis eros ut laoreet. Phasellus blandit lorem sit amet nisl luctus ullamcorper. Praesent suscipit semper sodales. Aenean ac magna massa. Proin maximus scelerisque nibh, quis auctor risus dapibus vel. Aliquam fringilla porta enim, eget sagittis metus scelerisque sit amet. Suspendisse tincidunt vestibulum orci, eu porta turpis imperdiet bibendum. Fusce suscipit ac eros aliquam tempor. Mauris dictum, ipsum non mollis tincidunt, nibh nunc malesuada neque, sed tempor velit neque ut nibh. 
-      </p>
-      <p>
-        Mauris et massa et turpis aliquet scelerisque. Duis at fermentum tortor, ac vestibulum lacus. Etiam in nisl varius, feugiat sapien id, feugiat nulla. Proin ullamcorper dolor in est fringilla rhoncus. Pellentesque scelerisque lacus nec lectus aliquam luctus. Quisque iaculis consectetur pharetra. Nulla facilisi. Praesent dolor erat, convallis sed leo quis, fringilla porta nisl. 
-      </p>
-      <p>
-        Vestibulum massa libero, vehicula pharetra arcu ac, lobortis laoreet eros. Integer aliquam velit non tellus tristique, vulputate rutrum neque mollis. Quisque ex risus, lacinia sed vehicula sed, fermentum non leo. Nunc tempus mi id purus commodo molestie. Pellentesque sit amet velit non felis condimentum fringilla. Nam dignissim ac lectus eget dignissim. Nulla facilisi. Vestibulum in augue tempus, dignissim urna sed, iaculis elit. Curabitur a odio aliquet, fermentum purus in, tincidunt sapien. Ut vel iaculis neque. Donec sagittis, tortor non condimentum hendrerit, quam libero fringilla nisi, in egestas lorem tellus eu ante. Phasellus volutpat aliquam eros. Quisque nulla est, consectetur ac egestas vitae, dapibus a libero. 
-      </p>
-      <p>
-        In eu est ut massa scelerisque laoreet id eu lorem. Pellentesque laoreet mollis arcu, eu gravida dolor. In diam erat, aliquet sit amet vestibulum id, ultricies eu felis. Nunc ultricies lacus felis, at rhoncus justo gravida ac. Sed dui nulla, convallis vel finibus ut, varius in dolor. Aliquam eu semper felis. In pulvinar tempor velit nec tincidunt. Proin lectus libero, volutpat quis consequat eu, imperdiet sed nunc. Nullam at lacus eget elit tincidunt tempus. Praesent nec justo at dui posuere ornare sit amet eu ligula. Cras ac justo sollicitudin, fermentum libero vel, dignissim libero. 
-      </p>
-    </>
+    <section>
+      <div className="min-h-screen pt-10 px-6 sm:px-8 md:px-16 xl:px-32">
+        <h1 className="py-16 text-2xl sm:text-3xl text-center">Contact Me</h1>
+
+        <div className="flex flex-col justify-center gap-4 sm:text-lg 3xl:text-xl py-8 lg:py-4">
+          <p>Let's connect!</p>
+          <p>Reach out via email or follow me on social media to discuss projects, ideas, or simply say hello.</p>
+        </div>
+        
+        <div className="flex justify-center items-stretch gap-6 xl:gap-12 3xl:gap-24 rounded-lg p-5 h-32">
+
+          <a href="" className="flex flex-col justify-end items-center w-16 group">
+            <span className="text-3xl border-2 rounded-full p-2.5 group-hover:text-4xl group-hover:-translate-y-1 duration-300">
+              <FaEnvelope />
+            </span>
+            <span className="hidden group-hover:block">Email</span>
+          </a>
+
+          <a href="" className="flex flex-col justify-end items-center w-16 group">
+            <span className="text-3xl border-2 rounded-full p-2.5 group-hover:text-4xl group-hover:-translate-y-1 duration-300">
+              <FaLinkedin />
+            </span>
+            <span className="3xl:text-lg hidden group-hover:block">Linkedin</span>
+          </a>
+
+          <a href="" className="flex flex-col justify-end items-center w-16 group">
+            <span className="text-3xl border-2 rounded-full p-2.5 group-hover:text-4xl group-hover:-translate-y-1 duration-300">
+              <FaGithub />
+            </span>
+            <span className="hidden group-hover:block">Github</span>
+          </a>
+
+          <a href="" className="flex flex-col justify-end items-center w-16 group">
+            <span className="text-3xl border-2 rounded-full p-2.5 group-hover:text-4xl group-hover:-translate-y-1 duration-300">
+              <FaInstagram />
+            </span>
+            <span className="hidden group-hover:block">Instagram</span>
+          </a>
+
+        </div>
+
+        <div className="flex justify-center pt-16 3xl:pt-32">
+          <Logo scale={0.7} animate={1} className="animate-flipv" />
+        </div>
+      </div>
+    </section>
   )
 }
 

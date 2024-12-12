@@ -1,8 +1,8 @@
 import React from "react";
 
-const Logo = ({scale, animate}) => {
+const Logo = ({scale, animate, ...props}) => {
   return (
-    <svg width={400*scale} height={300*scale} xmlns="http://www.w3.org/2000/svg">
+    <svg width={400*scale} height={300*scale} xmlns="http://www.w3.org/2000/svg" {...props}>
       {/* viewBox="0 0 300 200" "translate(0 0) scale(1)" */}
       {/* <rect width="100%" height="100%" fill="none" stroke="red"/> */}
       <g transform={"scale("+scale+")"} fill="currentColor" stroke="none">
