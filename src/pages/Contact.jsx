@@ -4,6 +4,13 @@ import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope} from "react-icons/fa";
 
 const Contact = () => {
 
+  const contactData = [
+    {name: "Email", icon: FaEnvelope, link: ""},
+    {name: "Linkedin", icon: FaLinkedin, link: ""},
+    {name: "Github", icon: FaGithub, link: ""},
+    {name: "Instagram", icon: FaInstagram, link: ""},
+  ];
+
   return (
     <section>
       <div className="min-h-screen pt-10 px-6 sm:px-8 md:px-16 xl:px-32">
@@ -16,34 +23,15 @@ const Contact = () => {
         
         <div className="flex justify-center items-stretch gap-6 xl:gap-12 3xl:gap-24 rounded-lg p-5 h-32">
 
-          <a href="" className="flex flex-col justify-end items-center w-16 group">
+        {contactData.map((item,i) => (
+          <a key={i} href={item.link} className="flex flex-col justify-end items-center w-16 group">
             <span className="text-3xl border-2 rounded-full p-2.5 group-hover:text-4xl group-hover:-translate-y-1 duration-300">
-              <FaEnvelope />
+              <item.icon />
             </span>
-            <span className="hidden group-hover:block">Email</span>
+            <span className="hidden group-hover:block">{item.name}</span>
           </a>
-
-          <a href="" className="flex flex-col justify-end items-center w-16 group">
-            <span className="text-3xl border-2 rounded-full p-2.5 group-hover:text-4xl group-hover:-translate-y-1 duration-300">
-              <FaLinkedin />
-            </span>
-            <span className="3xl:text-lg hidden group-hover:block">Linkedin</span>
-          </a>
-
-          <a href="" className="flex flex-col justify-end items-center w-16 group">
-            <span className="text-3xl border-2 rounded-full p-2.5 group-hover:text-4xl group-hover:-translate-y-1 duration-300">
-              <FaGithub />
-            </span>
-            <span className="hidden group-hover:block">Github</span>
-          </a>
-
-          <a href="" className="flex flex-col justify-end items-center w-16 group">
-            <span className="text-3xl border-2 rounded-full p-2.5 group-hover:text-4xl group-hover:-translate-y-1 duration-300">
-              <FaInstagram />
-            </span>
-            <span className="hidden group-hover:block">Instagram</span>
-          </a>
-
+        ))
+        }
         </div>
 
         <div className="flex justify-center pt-16 3xl:pt-32">
