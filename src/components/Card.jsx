@@ -11,11 +11,9 @@ const Card = ({ title, description, image, tags }) => {
         <h2 className="text-lg 3xl:text-xl py-2">{title}</h2>
         <p className="text-base 3xl:text-lg text-justify">{description}</p>
         <div className="flex flex-wrap gap-3 pt-4">
-          <Badge>{tags[0]}</Badge>
-          <Badge>{tags[1]}</Badge>
-          <Badge>{tags[2]}</Badge>
-          <Badge>{tags[3]}</Badge>
-          <Badge>{tags[4]}</Badge>
+        {tags.map((tag,i) => (
+          <Badge key={i}>{tag}</Badge>
+        ))}
         </div>
       </div>
     </div>
