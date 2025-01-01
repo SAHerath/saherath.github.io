@@ -22,7 +22,7 @@ const Header = () => {
                 <div className="h-16 flex justify-between items-strech px-4">
                     <h1 className="self-center">
                         <a href="" className=" hover:shadow-glow">
-                            <Logo scale={0.18} animate={0}/>
+                            <Logo scale={0.15} animate={0}/>
                             {/* <img src={Logo} className="block h-10 text-white" alt="My Logo" /> */}
                         </a>
                     </h1>

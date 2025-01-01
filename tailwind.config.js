@@ -31,10 +31,8 @@ export default {
         nunito: ['nunito', 'sans-serif'],
       },
       boxShadow: {
-        'glow': [
-          '0px 4px 16px rgba(17, 17, 26, 0.1)', 
-          '0px 8px 24px rgba(17, 17, 26, 0.1)', 
-          '0px 16px 56px rgba(17, 17, 26, 0.1)'
+        'glow-slate': [
+          '0px 2px 10px 2px rgba(148, 163, 184, 0.5)'
         ],
         'glow-green': [
           '0 10px 20px rgba(22, 163, 74, 0.8)'
