@@ -1,17 +1,17 @@
 import React from "react";
 import Card from "../components/Card";
-import GitHubCalendar from 'react-github-calendar';
 import P1Img from "../assets/images/p1.png";
 import P2Img from "../assets/images/p2.png";
 import P3Img from "../assets/images/p3.png";
 
 
 const Projects = () => {
+
   return (
     <section>
       <div className="min-h-screen pt-10 px-6 sm:px-8 md:px-16 xl:px-32">
         <h1 className="py-16 text-2xl sm:text-3xl text-center">My Projects</h1>
-        <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 xl:gap-16 justify-items-center xl:text-lg">
+        <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 xl:gap-16 justify-items-center">
 
           <Card
             image={P1Img}
@@ -35,10 +35,8 @@ const Projects = () => {
             />
             
         </div>
-        <div className="flex flex-col justify-center pt-12">
-          <h2 className="p-8 text-lg">My GitHub Activity</h2>
-          <GitHubCalendar username="SAHerath"  />
-        </div>
+
+
       </div>
     </section>
       
