@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
 import { Element } from "react-scroll";
 import Loader from "./components/Loader";
 import Header from "./components/Header";
@@ -8,8 +7,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-
-// import "./App.css";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -49,15 +46,7 @@ function App() {
         <Footer />
       </>
       }
-
-      {/* <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </main> */}
-
-
+      
     </>
   );
 }
