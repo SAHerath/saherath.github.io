@@ -5,12 +5,14 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
+  max-width: 2500px;
 	height: 100vh;
 	background: radial-gradient(farthest-side at 40% 50%, #21add0,#121599,#5d089b,#95033f,#8C6406);
   background-size: 400% 600%;
   animation: gradient-animation 60s ease-in-out infinite;
   text-align: center;
 }
+
 
 @keyframes gradient-animation {
   0% {
