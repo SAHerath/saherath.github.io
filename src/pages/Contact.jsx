@@ -5,10 +5,10 @@ import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope} from "react-icons/fa";
 const Contact = () => {
 
   const contactData = [
-    {name: "Email", icon: FaEnvelope, link: ""},
-    {name: "Linkedin", icon: FaLinkedin, link: ""},
-    {name: "Github", icon: FaGithub, link: ""},
-    {name: "Instagram", icon: FaInstagram, link: ""},
+    {name: "Email", icon: FaEnvelope, link: "mailto:h.supun.anuradha@gmail.com"},
+    {name: "Linkedin", icon: FaLinkedin, link: "https://www.linkedin.com/in/s-anuradha-herath"},
+    {name: "Github", icon: FaGithub, link: "https://github.com/SAHerath"},
+    {name: "Instagram", icon: FaInstagram, link: "https://www.instagram.com/sa_herath"},
   ];
 
   return (
