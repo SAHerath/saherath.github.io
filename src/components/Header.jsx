@@ -56,16 +56,16 @@ const Header = () => {
                 <div className="pb-2 sm:hidden">
                     <ul className="flex flex-col items-stretch px-8 sm:px-16 text-lg">
                         <li>
-                            <LinkScroll onClick={toggleMenu} to="home" spy={true} smooth={true} duration={500} className="block py-1 rounded-full hover:bg-gradient-to-t from-black text-white">Home</LinkScroll>
+                            <LinkScroll onClick={toggleMenu} to="home" activeClass="activelink" spy={true} smooth={true} duration={500} offset={-120} className="block py-1 rounded-full hover:bg-gradient-to-t from-black">Home</LinkScroll>
                         </li>
                         <li>
-                            <LinkScroll onClick={toggleMenu} to="about" spy={true} smooth={true} duration={500} className="block py-1 rounded-full hover:bg-gradient-to-t from-black">About</LinkScroll>
+                            <LinkScroll onClick={toggleMenu} to="about" activeClass="activelink" spy={true} smooth={true} duration={500} offset={-120} className="block py-1 rounded-full hover:bg-gradient-to-t from-black">About</LinkScroll>
                         </li>
                         <li>
-                            <LinkScroll onClick={toggleMenu} to="projects" spy={true} smooth={true} duration={500} className="block py-1 rounded-full hover:bg-gradient-to-t from-black">Projects</LinkScroll>
+                            <LinkScroll onClick={toggleMenu} to="projects" activeClass="activelink" spy={true} smooth={true} duration={500} offset={-120} className="block py-1 rounded-full hover:bg-gradient-to-t from-black">Projects</LinkScroll>
                         </li>
                         <li>
-                            <LinkScroll onClick={toggleMenu} to="contact" spy={true} smooth={true} duration={500} className="block py-1 rounded-full hover:bg-gradient-to-t from-black">Contact</LinkScroll>
+                            <LinkScroll onClick={toggleMenu} to="contact" activeClass="activelink" spy={true} smooth={true} duration={500} offset={-120} className="block py-1 rounded-full hover:bg-gradient-to-t from-black">Contact</LinkScroll>
                         </li>
                     </ul>
                 </div>

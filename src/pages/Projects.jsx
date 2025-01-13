@@ -11,7 +11,7 @@ const Projects = () => {
     <section>
       <div className="min-h-screen pt-10 px-6 sm:px-8 md:px-16 xl:px-32">
         <h1 className="py-16 text-2xl sm:text-3xl text-center">My Projects</h1>
-        <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 xl:gap-16 justify-items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 xl:gap-16 justify-items-center 2xl:py-10">
 
           <Card
             image={P1Img}

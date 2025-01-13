@@ -16,7 +16,7 @@ const Contact = () => {
       <div className="min-h-screen pt-10 px-6 sm:px-8 md:px-16 xl:px-32">
         <h1 className="py-16 text-2xl sm:text-3xl text-center">Contact Me</h1>
 
-        <div className="flex flex-col justify-center gap-4 sm:text-lg 3xl:text-xl py-8 lg:py-4">
+        <div className="flex flex-col justify-center gap-4 sm:text-lg 3xl:text-xl py-8 lg:py-4 2xl:py-10">
           <p>Let's connect!</p>
           <p>Reach out via email or follow me on social media to discuss projects, ideas, or simply say hello.</p>
         </div>
