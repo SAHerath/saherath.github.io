@@ -12,9 +12,8 @@ const Header = () => {
     const toggleMenu = () => { 
         setMenuOpen(!menuOpen);
     }
-    const handleResume = () => {
-        console.log("hello handleResume!");
-    }
+
+    const resumeLink = "https://drive.google.com/file/d/1gehlQe2YPRTdhonsauKUUNk8jiTCmhww/view?usp=sharing";
      
     return ( 
         <header className="sticky top-0 w-full z-40 bg-gradient-to-b from-gray-800 from-5% backdrop-blur-lg shadow-xl "> {/*max-w-[2500px]*/}
@@ -42,7 +41,7 @@ const Header = () => {
                     </ul>
                     <ul className="flex self-center gap-3 ">
                         <li>
-                            <a onClick={handleResume} className="px-4 py-2 rounded-md cursor-pointer text-white bg-green-600 hover:text-black hover:shadow-glow-green">Resume</a>
+                            <a href={resumeLink} className="px-4 py-2 rounded-md cursor-pointer text-white bg-green-600 hover:text-black hover:shadow-glow-green">Resume</a>
                         </li>
                         <li className="sm:hidden">
                             <a onClick={toggleMenu} className={"cursor-pointer text-2xl group" + (menuOpen ? " open" : "")}>
