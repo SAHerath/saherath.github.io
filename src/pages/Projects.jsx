@@ -1,8 +1,19 @@
 import React, { useState, useEffect } from "react";
 import Card from "../components/Card";
+import ImageModal from "../components/ImageModal";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+
+  const openModal = (image) => {
+    setSelectedImage(image);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
 
   useEffect(() => {
     fetch("src/data/projectData.json") 
@@ -25,12 +36,17 @@ const Projects = () => {
               title={project.title}
               tags={project.tags}
               description={project.description}
+              onImageClick={() => openModal(project.image)}
             />
           ))}
-    
+
         </div>
- 
+
       </div>
+
+      {selectedImage &&
+        <ImageModal imageSrc={selectedImage} onClose={closeModal} />
+      }
     </section>
       
   )
