@@ -5,24 +5,23 @@ const ImageModal = ({ imageSrc, onClose }) => {
 
   useEffect(() => {
     setScrollY(window.scrollY);
+    document.body.style.paddingRight = `${window.innerWidth - document.documentElement.clientWidth}px`; // remove horizontal shift
     document.body.style.overflow = "hidden"; //scroll off
 
     return () => {
       document.body.style.overflow = "auto"; // scroll on
+      document.body.style.paddingRight = "";
     };
   }, []);
 
   return (
-    <div onClick={onClose} className="fixed left-0 w-full h-full bg-black bg-opacity-70 flex justify-center items-center cursor-pointer"
+    <div onClick={onClose} className="absolute inset-0 w-full h-full z-50 bg-black bg-opacity-70 flex justify-center items-center cursor-pointer"
       style={{
-        top: `${scrollY+20}px`,
+        top: `${scrollY}px`,
       }}
     >
-      {/* <button onClick={onClose} className="absolute top-20 right-16 text-white text-4xl font-bold" >
-        &times;
-      </button> */}
-      <div className="relative sm:w-11/12 md:w-4/5 max-w-[700px] p-4 rounded-2xl shadow-lg">
-        <img src={imageSrc} alt="enlarged image" className="w-full max-h-[600px] object-contain object-center rounded-lg" />
+      <div className="relative sm:w-11/12 md:w-4/5 max-w-[700px]">
+        <img src={imageSrc} alt="enlarged image" className="w-full max-h-[550px] object-contain object-center rounded-lg" />
       </div>
     </div>
   );
