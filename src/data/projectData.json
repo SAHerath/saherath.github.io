@@ -1,0 +1,35 @@
+[
+  
+    {
+      "title": "Realistic Island",
+      "image": "/images/p5.png",
+      "tags": ["Unity Engine", "Terrain Tools", "Shader Graph", "Cinemachine", "C#"],
+      "description": "Created a highly immersive island environment with realistic terrain, dynamic vegetation, and ocean simulation. Leveraged Unity’s Terrain Tools, Shader Graph, and wind zones for natural interactions, along with ambient spatial audio and daylight simulation for a lifelike experience. Enhanced realism with detailed textures, natural lighting, and free Unity assets."
+    },
+    {
+      "title": "Warrior's Quest 2D Game",
+      "image": "/images/p4.png",
+      "tags": ["Unity Engine", "Unity Animator", "Unity Tilemap", "Unity UI Framework", "C#"],
+      "description": "Developed an engaging 2D game with challenging gameplay, dynamic enemy behaviors, and physics-based mechanics. The game features collectible rewards, level progression, smooth animations, immersive sounds, and an interactive UI. Built using Unity, with C# scripting, Tilemap for level design, and Cinemachine for dynamic camera control."
+    },
+    {
+      "title": "Air Quality Monitor",
+      "image": "/images/p3.png",
+      "tags": ["Altium", "Neoden4", "C/C++", "RP2040"],
+      "description": "Designed and assembled a custom PCB and developed embedded firmware in C to monitor air quality by measuring particulate matter, CO2, and other toxic gases. The system supports both wired and wireless connectivity via 4G, WiFi, and Ethernet. Data is visualized in real-time through a web interface, including alerts for critical conditions."
+    },
+    {
+      "title": "Inventory Management and POS System",
+      "image": "/images/p2.png",
+      "tags": ["HTML", "SCSS", "JavaScript", "PHP", "MySQL"],
+      "description": "Developed a scalable web-based inventory management and point-of-sale (POS) system using object-oriented programming and MVC architecture. Key features include barcode scanning, automated reordering, real-time inventory tracking, role-based login, customer and vendor management, and customized report generation."
+    },
+    {
+      "title": "Indoor Asset Tracking System",
+      "image": "/images/p1.png",
+      "tags": ["Altium", "Solidworks", "Neoden4", "C/C++", "RP2040"],
+      "description": "Developed an Indoor Asset Tracking System using Ultra-Wideband (UWB) technology for sub-10-centimeter localization accuracy. Designed two custom PCBs: a base station connected to a web server for centralized tracking and a sensor node with an RFID reader, barcode scanner, display, control buttons, and battery backup for reliable operation."
+    }
+
+  ]
+  
