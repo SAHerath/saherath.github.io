@@ -5,6 +5,7 @@ import ImageModal from "../components/ImageModal";
 const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [showAll, setShowAll] = useState(false);
 
 
   const openModal = (image) => {
@@ -29,7 +30,7 @@ const Projects = () => {
         <h1 className="py-16 text-2xl sm:text-3xl text-center">My Projects</h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 xl:gap-16 justify-items-center 2xl:py-10">
           
-          {projects.map((project, index) => (
+          {(showAll ? projects : projects.slice(0, 6)).map((project, index) => (
             <Card
               key={index}
               image={project.image}
@@ -40,6 +41,18 @@ const Projects = () => {
             />
           ))}
 
+        </div>
+
+        <div className="flex justify-center mt-2">
+          {!showAll ? (
+            <button className="px-4 py-1.5 border-2 rounded-md hover:bg-black hover:bg-opacity-20" onClick={() => setShowAll(true)} >
+              More Projects
+            </button>
+          ) : (
+            <button className="px-4 py-1.5 border-2 rounded-md hover:bg-black hover:bg-opacity-20" onClick={() => setShowAll(false)} >
+              Less Projects
+            </button>
+          )}
         </div>
 
       </div>
