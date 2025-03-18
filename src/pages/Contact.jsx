@@ -1,15 +1,35 @@
-import React from "react";
+
+import React, { useState, useEffect } from "react";
 import Logo from "../components/Logo";
-import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope} from "react-icons/fa";
 
 const Contact = () => {
+  const [contacts, setContacts] = useState([]);
 
-  const contactData = [
-    {name: "Email", icon: FaEnvelope, link: "mailto:h.supun.anuradha@gmail.com"},
-    {name: "Linkedin", icon: FaLinkedin, link: "https://www.linkedin.com/in/s-anuradha-herath"},
-    {name: "Github", icon: FaGithub, link: "https://github.com/SAHerath"},
-    {name: "Instagram", icon: FaInstagram, link: "https://www.instagram.com/sa_herath"},
-  ];
+  useEffect(() => {
+    const fetchContactData = async () => {
+      try {
+        const response = await fetch("src/data/contactData.json");
+        const data = await response.json();
+
+        // Dynamically import icons
+        const updatedData = await Promise.all(
+          data.map(async (item) => {
+            const iconModule = await import("react-icons/fa");
+            return {
+              ...item,
+              icon: iconModule[item.icon] || null
+            };
+          })
+        );
+
+        setContacts(updatedData);
+      } catch (error) {
+        console.error("Error loading contacts:", error);
+      }
+    };
+
+    fetchContactData();
+  }, []);
 
   return (
     <section>
@@ -23,12 +43,12 @@ const Contact = () => {
         
         <div className="flex justify-center items-stretch gap-6 xl:gap-12 3xl:gap-24 rounded-lg p-5 h-32">
 
-        {contactData.map((item,i) => (
-          <a key={i} href={item.link} className="flex flex-col justify-end items-center w-16 group">
+        {contacts.map((item, index) => (
+          <a key={index} href={item.link} className="flex flex-col justify-end items-center w-16 group">
             <span className="text-3xl border-2 rounded-full p-2.5 group-hover:text-4xl group-hover:-translate-y-1 duration-300">
               <item.icon />
             </span>
-            <span className="hidden group-hover:block">{item.name}</span>
+            <span className="hidden group-hover:block">{item.title}</span>
           </a>
         ))
         }
