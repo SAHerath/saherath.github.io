@@ -17,10 +17,17 @@ const Projects = () => {
   };
 
   useEffect(() => {
-    fetch("src/data/projectData.json") 
-      .then((response) => response.json())
-      .then((data) => setProjects(data))
-      .catch((error) => console.error("Error loading projects:", error));
+    const fetchProjectData = async () => {
+      try {
+        const response = await fetch("src/data/projectData.json");
+        const data = await response.json();
+        setProjects(data);
+      } catch (error) {
+        console.error("Error loading projects:", error);
+      }
+    }
+
+    fetchProjectData();
   }, []);
 
 
@@ -43,7 +50,7 @@ const Projects = () => {
 
         </div>
 
-        <div className="flex justify-center mt-2">
+        <div className="flex justify-center mt-8 2xl:mt-2">
           {!showAll ? (
             <button className="px-4 py-1.5 border-2 rounded-md hover:bg-black hover:bg-opacity-20" onClick={() => setShowAll(true)} >
               More Projects
