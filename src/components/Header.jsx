@@ -1,9 +1,12 @@
 import React, {useState} from "react";
 import { Link as LinkRouter } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
+import ReactGA from "react-ga4";
 import {PiListBold, PiXBold} from "react-icons/pi";
 import Logo from "./Logo";
 // import Logo from "/logo/AH.svg";
+
+const resumeLink = "https://drive.google.com/file/d/1gehlQe2YPRTdhonsauKUUNk8jiTCmhww/view?usp=sharing";
 
 const Header = () => {
 
@@ -13,7 +16,14 @@ const Header = () => {
         setMenuOpen(!menuOpen);
     }
 
-    const resumeLink = "https://drive.google.com/file/d/1gehlQe2YPRTdhonsauKUUNk8jiTCmhww/view?usp=sharing";
+    const handleResumeDownload = () => {
+        ReactGA.event({
+          category: "Resume",
+          action: "Download",
+          label: "Resume Download",
+        });
+        window.open(resumeLink, "_blank");
+      };
      
     return ( 
         <header className="sticky top-0 w-full z-40 bg-gradient-to-b from-gray-800 from-5% backdrop-blur-lg shadow-xl "> {/*max-w-[2500px]*/}
@@ -41,7 +51,7 @@ const Header = () => {
                     </ul>
                     <ul className="flex self-center gap-3 ">
                         <li>
-                            <a href={resumeLink} className="px-4 py-2 rounded-md cursor-pointer text-white bg-green-600 hover:text-black hover:shadow-glow-green">Resume</a>
+                            <a onClick={handleResumeDownload} className="px-4 py-2 rounded-md cursor-pointer text-white bg-green-600 hover:text-black hover:shadow-glow-green">Resume</a>
                         </li>
                         <li className="sm:hidden">
                             <a onClick={toggleMenu} className={"cursor-pointer text-2xl group" + (menuOpen ? " open" : "")}>
