@@ -6,7 +6,8 @@ import {PiListBold, PiXBold} from "react-icons/pi";
 import Logo from "./Logo";
 // import Logo from "/logo/AH.svg";
 
-const resumeLink = "https://drive.google.com/file/d/1gehlQe2YPRTdhonsauKUUNk8jiTCmhww/view?usp=sharing";
+// const resumeLink = "https://drive.google.com/file/d/1gehlQe2YPRTdhonsauKUUNk8jiTCmhww/view?usp=sharing";  // old
+const resumeLink = "https://drive.google.com/file/d/1CGHVlQJMGg18aga4xPJp3-oojhTcY7PP/view?usp=sharing";  // new
 
 const Header = () => {
 
