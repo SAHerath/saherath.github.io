@@ -22,6 +22,7 @@ export default {
       DEFAULT: '4px',
       'md': '0.375rem',
       'lg': '0.5rem',
+      'xl': '1rem',
       'full': '9999px',
       'large': '12px',
       'vl': '3rem',

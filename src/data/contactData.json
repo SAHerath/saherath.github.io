@@ -1,0 +1,22 @@
+[
+	{
+		"title": "Email",
+		"icon": "FaEnvelope",
+		"link": "mailto:h.supun.anuradha@gmail.com"
+	},
+	{
+		"title": "Linkedin",
+		"icon": "FaLinkedin",
+		"link": "https://www.linkedin.com/in/s-anuradha-herath"
+	},
+	{
+		"title": "Github",
+		"icon": "FaGithub",
+		"link": "https://github.com/SAHerath"
+	},
+	{
+		"title": "Instagram",
+		"icon": "FaInstagram",
+		"link": "https://www.instagram.com/sa_herath"
+	}
+]

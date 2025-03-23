@@ -3,21 +3,32 @@
 @tailwind utilities;
 
 @layer base {
-    html, body {
-        user-select: none;
-        cursor: default;
-        box-sizing: border-box;
-        color-scheme: dark;
-        scrollbar-width: thin;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100vh;
-        background: radial-gradient(farthest-side at 40% 50%, #21add0,#121599,#5d089b,#95033f,#8C6406);
-        background-size: 400% 600%;
-        animation: gradient-animation 60s ease-in-out infinite;
-        text-align: center;
-    }
+  @font-face {
+    font-family: "nunito";
+    src: url("/fonts/Nunito-SemiBold.ttf");
+  }
+
+  html, body {
+    user-select: none;
+    cursor: default;
+    box-sizing: border-box;
+    color-scheme: dark;
+    scrollbar-width: thin;
+    margin: 0;
+    padding: 0;
+    /* max-width: 2500px; */
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(farthest-side at 40% 50%, #21add0,#121599,#5d089b,#95033f,#8C6406);
+    background-size: 400% 600%;
+    animation: gradient-animation 60s ease-in-out infinite;
+    text-align: center;
+    perspective: 500px;
+  }
+
+}
+
+@layer components {
 
 }
 
@@ -25,11 +36,7 @@
   .activelink {
     color: white;
   }
-}
 
-@font-face {
-    font-family: "nunito";
-    src: url("/fonts/Nunito-SemiBold.ttf");
 }
 
 @keyframes gradient-animation {

@@ -1,9 +1,13 @@
 import React, {useState} from "react";
 import { Link as LinkRouter } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
+import ReactGA from "react-ga4";
 import {PiListBold, PiXBold} from "react-icons/pi";
 import Logo from "./Logo";
 // import Logo from "/logo/AH.svg";
+
+// const resumeLink = "https://drive.google.com/file/d/1gehlQe2YPRTdhonsauKUUNk8jiTCmhww/view?usp=sharing";  // old
+const resumeLink = "https://drive.google.com/file/d/1CGHVlQJMGg18aga4xPJp3-oojhTcY7PP/view?usp=sharing";  // new
 
 const Header = () => {
 
@@ -12,9 +16,15 @@ const Header = () => {
     const toggleMenu = () => { 
         setMenuOpen(!menuOpen);
     }
-    const handleResume = () => {
-        console.log("hello handleResume!");
-    }
+
+    const handleResumeDownload = () => {
+        ReactGA.event({
+          category: "Resume",
+          action: "Download",
+          label: "Resume Download",
+        });
+        window.open(resumeLink, "_blank");
+      };
      
     return ( 
         <header className="sticky top-0 w-full z-40 bg-gradient-to-b from-gray-800 from-5% backdrop-blur-lg shadow-xl "> {/*max-w-[2500px]*/}
@@ -42,7 +52,7 @@ const Header = () => {
                     </ul>
                     <ul className="flex self-center gap-3 ">
                         <li>
-                            <a onClick={handleResume} className="px-4 py-2 rounded-md cursor-pointer text-white bg-green-600 hover:text-black hover:shadow-glow-green">Resume</a>
+                            <a onClick={handleResumeDownload} className="px-4 py-2 rounded-md cursor-pointer text-white bg-green-600 hover:text-black hover:shadow-glow-green">Resume</a>
                         </li>
                         <li className="sm:hidden">
                             <a onClick={toggleMenu} className={"cursor-pointer text-2xl group" + (menuOpen ? " open" : "")}>
@@ -56,16 +66,16 @@ const Header = () => {
                 <div className="pb-2 sm:hidden">
                     <ul className="flex flex-col items-stretch px-8 sm:px-16 text-lg">
                         <li>
-                            <LinkScroll onClick={toggleMenu} to="home" spy={true} smooth={true} duration={500} className="block py-1 rounded-full hover:bg-gradient-to-t from-black text-white">Home</LinkScroll>
+                            <LinkScroll onClick={toggleMenu} to="home" activeClass="activelink" spy={true} smooth={true} duration={500} offset={-120} className="block py-1 rounded-full hover:bg-gradient-to-t from-black">Home</LinkScroll>
                         </li>
                         <li>
-                            <LinkScroll onClick={toggleMenu} to="about" spy={true} smooth={true} duration={500} className="block py-1 rounded-full hover:bg-gradient-to-t from-black">About</LinkScroll>
+                            <LinkScroll onClick={toggleMenu} to="about" activeClass="activelink" spy={true} smooth={true} duration={500} offset={-120} className="block py-1 rounded-full hover:bg-gradient-to-t from-black">About</LinkScroll>
                         </li>
                         <li>
-                            <LinkScroll onClick={toggleMenu} to="projects" spy={true} smooth={true} duration={500} className="block py-1 rounded-full hover:bg-gradient-to-t from-black">Projects</LinkScroll>
+                            <LinkScroll onClick={toggleMenu} to="projects" activeClass="activelink" spy={true} smooth={true} duration={500} offset={-120} className="block py-1 rounded-full hover:bg-gradient-to-t from-black">Projects</LinkScroll>
                         </li>
                         <li>
-                            <LinkScroll onClick={toggleMenu} to="contact" spy={true} smooth={true} duration={500} className="block py-1 rounded-full hover:bg-gradient-to-t from-black">Contact</LinkScroll>
+                            <LinkScroll onClick={toggleMenu} to="contact" activeClass="activelink" spy={true} smooth={true} duration={500} offset={-120} className="block py-1 rounded-full hover:bg-gradient-to-t from-black">Contact</LinkScroll>
                         </li>
                     </ul>
                 </div>

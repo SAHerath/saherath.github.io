@@ -3,6 +3,8 @@ import {PiHandWaving } from "react-icons/pi";
 import ProfileImg from "../assets/images/avatar.png";
 import Typewriter from 'typewriter-effect';
 
+const titles = ['Full-Stack Developer', 'Embedded Systems Engineer', 'Hardware Design Engineer', 'Electronics R&D Engineer', 'IoT Systems Engineer', 'Game Developer', 'Freelancer'];
+
 const Home = () => {
   return ( 
     <section>
@@ -18,7 +20,7 @@ const Home = () => {
           </div>
           <div className="pt-10 text-2xl sm:text-3xl">
             <Typewriter options={{
-                        strings: ['Full-Stack Developer', 'DevOps Engineer', 'Embedded Systems Engineer', 'Hardware Design Engineer', 'Electronics R&D Engineer', 'IoT Systems Engineer', 'Freelancer'],
+                        strings: titles,
                         autoStart: true,
                         loop: true,
                       }}

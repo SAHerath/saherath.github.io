@@ -1,43 +1,72 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Card from "../components/Card";
-import P1Img from "../assets/images/p1.png";
-import P2Img from "../assets/images/p2.png";
-import P3Img from "../assets/images/p3.png";
-
+import ImageModal from "../components/ImageModal";
 
 const Projects = () => {
+  const [projects, setProjects] = useState([]);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [showAll, setShowAll] = useState(false);
+
+
+  const openModal = (image) => {
+    setSelectedImage(image);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
+  useEffect(() => {
+    const fetchProjectData = async () => {
+      try {
+        const response = await fetch("src/data/projectData.json");
+        const data = await response.json();
+        setProjects(data);
+      } catch (error) {
+        console.error("Error loading projects:", error);
+      }
+    }
+
+    fetchProjectData();
+  }, []);
+
 
   return (
     <section>
       <div className="min-h-screen pt-10 px-6 sm:px-8 md:px-16 xl:px-32">
         <h1 className="py-16 text-2xl sm:text-3xl text-center">My Projects</h1>
-        <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 xl:gap-16 justify-items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 xl:gap-16 justify-items-center 2xl:py-10">
+          
+          {(showAll ? projects : projects.slice(0, 6)).map((project, index) => (
+            <Card
+              key={index}
+              image={project.image}
+              title={project.title}
+              tags={project.tags}
+              description={project.description}
+              onImageClick={() => openModal(project.image)}
+            />
+          ))}
 
-          <Card
-            image={P1Img}
-            title={"Indoor Asset Tracking System"}
-            tags={["Altium", "Solidworks","Neoden4", "C/C++", "RP2040"]}
-            description={"Developed an Indoor Asset Tracking System using Ultra-Wideband (UWB) technology for sub-10-centimeter localization accuracy. Designed two custom PCBs: a base station connected to a web server for centralized tracking and a sensor node with an RFID reader, barcode scanner, display, control buttons, and battery backup for reliable operation."}
-            />
-          
-          <Card 
-            image={P2Img}
-            title={"Inventory Management and POS System"}
-            tags={["HTML", "SCSS","JavaScript", "PHP", "MySQL"]}
-            description={"Developed a scalable web-based inventory management and point-of-sale (POS) system using object-oriented programming and MVC architecture. Key features include barcode scanning, automated reordering, real-time inventory tracking, role-based login, customer and vendor management, and customized report generation."}
-            />
-          
-          <Card 
-            image={P3Img}
-            title={"Air Quality Monitor"}
-            tags={["Altium","Neoden4", "C/C++", "RP2040"]}
-            description={"Designed and assembled a custom PCB and developed embedded firmware in C to monitor air quality by measuring particulate matter, CO2, and other toxic gases. The system supports both wired and wireless connectivity via 4G, WiFi, and Ethernet. Data is visualized in real-time through a web interface, including alerts for critical conditions."}
-            />
-            
         </div>
 
+        <div className="flex justify-center mt-8 2xl:mt-2">
+          {!showAll ? (
+            <button className="px-4 py-1.5 border-2 rounded-md hover:bg-black hover:bg-opacity-20" onClick={() => setShowAll(true)} >
+              More Projects
+            </button>
+          ) : (
+            <button className="px-4 py-1.5 border-2 rounded-md hover:bg-black hover:bg-opacity-20" onClick={() => setShowAll(false)} >
+              Less Projects
+            </button>
+          )}
+        </div>
 
       </div>
+
+      {selectedImage &&
+        <ImageModal imageSrc={selectedImage} onClose={closeModal} />
+      }
     </section>
       
   )
