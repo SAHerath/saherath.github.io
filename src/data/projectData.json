@@ -1,50 +1,56 @@
   [
     {
       "title": "SriCare Customer Portal",
-      "image": "/images/p8.png",
+      "image": "/images/p10.png",
       "tags": ["TypeScript", "React Router", "Material UI", "Axios + Interceptors", "JWT", "Socket.IO"],
       "description": "The SriCare Web Portal is a React-based application designed to enhance customer experience for a telecommunication company. It offers features like user authentication, service management, billing, notifications, live chat support, and an interactive dashboard. The portal ensures seamless navigation with a responsive, user-friendly interface, optimizing the experience."
     },
     {
       "title": "Realistic Island",
-      "image": "/images/p7.png",
+      "image": "/images/p9.png",
       "tags": ["Unity Engine", "Terrain Tools", "Shader Graph", "Cinemachine", "C#"],
       "description": "Created a highly immersive island environment with realistic terrain, dynamic vegetation, and ocean simulation. Leveraged Unity’s Terrain Tools, Shader Graph, and wind zones for natural interactions, along with ambient spatial audio and daylight simulation for a lifelike experience. Enhanced realism with detailed textures, natural lighting, and free Unity assets."
     },
     {
       "title": "Warrior's Quest 2D Game",
-      "image": "/images/p6.png",
+      "image": "/images/p8.png",
       "tags": ["Unity Engine", "Unity Animator", "Unity Tilemap", "Unity UI Framework", "C#"],
       "description": "Developed an engaging 2D game with challenging gameplay, dynamic enemy behaviors, and physics-based mechanics. The game features collectible rewards, level progression, smooth animations, immersive sounds, and an interactive UI. Built using Unity, with C# scripting, Tilemap for level design, and Cinemachine for dynamic camera control."
     },
     {
-      "title": "Air Quality Monitor",
-      "image": "/images/p5.png",
-      "tags": ["Altium", "Neoden4", "C/C++", "RP2040"],
-      "description": "Designed and assembled a custom PCB and developed embedded firmware in C to monitor air quality by measuring particulate matter, CO2, and other toxic gases. The system supports both wired and wireless connectivity via 4G, WiFi, and Ethernet. Data is visualized in real-time through a web interface, including alerts for critical conditions."
-    },
-    {
       "title": "Inventory Management and POS System",
-      "image": "/images/p4.png",
+      "image": "/images/p7.png",
       "tags": ["HTML", "SCSS", "JavaScript", "PHP", "MySQL"],
       "description": "Developed a scalable web-based inventory management and point-of-sale (POS) system using object-oriented programming and MVC architecture. Key features include barcode scanning, automated reordering, real-time inventory tracking, role-based login, customer and vendor management, and customized report generation."
     },
     {
+      "title": "Air Quality Monitor",
+      "image": "/images/p6.png",
+      "tags": ["Altium", "Neoden4", "C/C++", "RP2040"],
+      "description": "Designed and assembled a custom PCB and developed embedded firmware in C to monitor air quality by measuring particulate matter, CO2, and other toxic gases. The system supports both wired and wireless connectivity via 4G, WiFi, and Ethernet. Data is visualized in real-time through a web interface, including alerts for critical conditions."
+    },
+    {
       "title": "Indoor Asset Tracking System",
-      "image": "/images/p3.png",
+      "image": "/images/p5.png",
       "tags": ["Altium", "Solidworks", "Neoden4", "C/C++", "RP2040"],
-      "description": "Developed an Indoor Asset Tracking System using Ultra-Wideband (UWB) technology for sub-10-centimeter localization accuracy. Designed two custom PCBs: a base station connected to a web server for centralized tracking and a sensor node with an RFID reader, barcode scanner, display, control buttons, and battery backup for reliable operation."
+      "description": "Developed an Indoor Asset Tracking System using Ultra-Wideband (UWB) technology for sub 10 centimeter localization accuracy. Designed two custom PCBs: a base station connected to a web server for centralized tracking and a sensor node with an RFID reader, barcode scanner, display, control buttons, and battery backup for reliable operation."
     },
     {
       "title": "AVR OTA Firmware Updater",
-      "image": "/images/p2.png",
+      "image": "/images/p4.png",
       "tags": ["Bootloader", "Atmel Studio", "C", "MQTT", "SIM808", "Mosquitto-PHP"],
       "description": "Designed a remotely programmable firmware solution for the ATMega2560 microcontroller over a cellular network. Developed hardware modifications, a custom flash bootloader, GPRS communication architecture, MQTT protocol suite, and a PHP server controller for seamless OTA updates."
     },
     {
+      "title": "IoT Monitoring Device",
+      "image": "/images/p3.png",
+      "tags": ["Altium", "ATMega2560", "SIM800", "C/C++"],
+      "description": "A telematics-based industrial monitoring device designed to capture a wide range of parameters in real-time and offline. It supports analog/digital inputs, SPI, I2C, UART, Modbus (RS485), CAN bus, and 4-20mA interfaces. Powered by an ATMega2560 controller, SIM800 GSM module, RTC, flash memory, isolated relays, and an internal battery backup."
+    },
+    {
       "title": "Minesweeper Solver",
-      "image": "/images/p1.png",
-      "tags": ["FPGA", "Verilog", "Finite State Machine ", "UART"],
+      "image": "/images/p2.png",
+      "tags": ["FPGA", "Verilog", "Finite State Machine", "UART"],
       "description": "A Minesweeper PC game solving algorithm implemented on an Altera FPGA board using Verilog language. The algorithm analyzes the current minefield and safely flags mines by communicating with the game via the USART protocol"
     }
   ]
