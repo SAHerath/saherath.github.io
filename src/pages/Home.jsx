@@ -1,11 +1,12 @@
 import React from "react";
 import {PiHandWaving } from "react-icons/pi";
-import ProfileImg from "../assets/images/avatar.png";
+import ProfileImg from "/images/avatar.png";
 import Typewriter from 'typewriter-effect';
 
 const titles = ['Full-Stack Developer', 'Embedded Systems Engineer', 'Hardware Design Engineer', 'Electronics R&D Engineer', 'IoT Systems Engineer', 'Game Developer', 'Freelancer'];
 
 const Home = () => {
+
   return ( 
     <section>
       <div className="min-h-screen pt-12 md:px-16 flex items-center justify-around flex-col md:flex-row">
