@@ -1,7 +1,8 @@
 import React from "react";
-import WorkspaceImg from "../assets/images/workspace.png";
+import WorkspaceImg from "/images/workspace.png";
 
 const About = () => {
+
   return ( 
     <section>
       <div className="min-h-screen pt-10 px-6 sm:px-10 md:px-16 lg:px-10 xl:px-20 flex flex-col-reverse lg:flex-row lg:justify-around items-center gap-8 xl:gap-16">
