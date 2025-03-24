@@ -1,35 +1,44 @@
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Logo from "../components/Logo";
+import { FaEnvelope, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+// import * as FaIcons from "react-icons/fa";
 
-const Contact = () => {
-  const [contacts, setContacts] = useState([]);
+const Contact = ({data}) => {
+  // console.log(data);
 
-  useEffect(() => {
-    const fetchContactData = async () => {
-      try {
-        const response = await fetch("src/data/contactData.json");
-        const data = await response.json();
+  const icons = {
+    FaEnvelope: <FaEnvelope />,
+    FaLinkedin: <FaLinkedin />,
+    FaGithub: <FaGithub />,
+    FaInstagram: <FaInstagram />,
+  };
 
-        // Dynamically import icons
-        const updatedData = await Promise.all(
-          data.map(async (item) => {
-            const iconModule = await import("react-icons/fa");
-            return {
-              ...item,
-              icon: iconModule[item.icon] || null
-            };
-          })
-        );
+  // const [contacts, setContacts] = useState([]);
 
-        setContacts(updatedData);
-      } catch (error) {
-        console.error("Error loading contacts:", error);
-      }
-    };
+  // useEffect(() => {
 
-    fetchContactData();
-  }, []);
+  //   const fetchContacts = async () => {
+  //     try {
+  //       const response = await fetch(import.meta.env.BASE_URL + "data/contactData.json");
+  //       if (!response.ok) throw new Error("Failed to load contacts");
+        
+  //       const data = await response.json();
+
+  //       // Map icons dynamically
+  //       const updatedData = data.map((item) => ({
+  //         ...item,
+  //         icon: FaIcons[item.icon] || FaIcons.FaQuestionCircle, // Fallback icon
+  //       }));
+
+  //       setContacts(updatedData);
+  //     } catch (error) {
+  //       console.error("Error loading contacts:", error);
+  //     }
+  //   };
+
+  //   fetchContacts();
+  // }, []);
 
   return (
     <section>
@@ -43,10 +52,10 @@ const Contact = () => {
         
         <div className="flex justify-center items-stretch gap-6 xl:gap-12 3xl:gap-24 rounded-lg p-5 h-32">
 
-        {contacts.map((item, index) => (
+        {data?.map((item, index) => (
           <a key={index} href={item.link} className="flex flex-col justify-end items-center w-16 group">
             <span className="text-3xl border-2 rounded-full p-2.5 group-hover:text-4xl group-hover:-translate-y-1 duration-300">
-              <item.icon />
+              {icons[item.icon] || "?"}
             </span>
             <span className="hidden group-hover:block">{item.title}</span>
           </a>
