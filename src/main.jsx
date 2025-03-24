@@ -11,7 +11,11 @@ const TrackPageView = () => {
   const location = useLocation();
 
   useEffect(() => {
-    ReactGA.send({ hitType: "pageview", page: location.pathname });
+    ReactGA.send({ 
+      hitType: "pageview",
+      page: location.pathname,
+      title: "Portfolio"
+    });
   }, [location]);
 
   return null;

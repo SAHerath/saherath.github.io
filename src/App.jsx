@@ -8,45 +8,57 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 
-function App() {
-  const [loading, setLoading] = useState(true);
+const App = () => {
+  const [data, setData] = useState({});
+  const [fetchLoader, setFetchLoader] = useState(true);
+  const [timerlodaer, setTimerLoader] = useState(true);
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      setLoading(false);
-      console.log("initial loading complete!");
+    const timer = setTimeout(() => {
+      setTimerLoader(false);
     }, 1500);
 
-    // cleanup timeout
-    return () => clearTimeout(timeout);
-  }, []); // runs only once
+    const fetchData = async () => {
+      try {
+        const response = await fetch(import.meta.env.BASE_URL + "data/myData.json");
+        const jsonData = await response.json();
+        setData(jsonData);
+      } catch (error) {
+        console.error("Error fetching data", error);
+      } finally {
+        setFetchLoader(false);
+      }
+    };
+
+    fetchData();
+
+    return () => {
+      clearTimeout(timer);
+    }
+  }, [])
+
+  if(timerlodaer || fetchLoader) {
+    return <Loader />;
+  }
 
   return (
     <>
-      {loading &&
-      <Loader/>
-      }
-      {!loading &&
-      <>
-        <Header />
-        <main>
-          <Element name="home">
-            <Home/>
-          </Element>
-          <Element name="about">
-            <About/>
-          </Element>
-          <Element name="projects">
-            <Projects/>
-          </Element>
-          <Element name="contact">
-            <Contact/>
-          </Element>
-        </main>
-        <Footer />
-      </>
-      }
-      
+      <Header data={data.header} />
+      <main>
+        <Element name="home">
+          <Home data={data.home} />
+        </Element>
+        <Element name="about">
+          <About data={data.about} />
+        </Element>
+        <Element name="projects">
+          <Projects data={data.projects} />
+        </Element>
+        <Element name="contact">
+          <Contact data={data.contacts} />
+        </Element>
+      </main>
+      <Footer />
     </>
   );
 }

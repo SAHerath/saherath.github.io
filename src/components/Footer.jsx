@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { countPageViews } from "../data/counter";
+import { countPageViews } from "../utils/counter";
 
 const Footer = () => {
   const [pageViews, setPageViews] = useState(0);

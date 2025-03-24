@@ -1,15 +1,13 @@
 import React, {useState} from "react";
-import { Link as LinkRouter } from "react-router-dom";
+// import { Link as LinkRouter } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
 import ReactGA from "react-ga4";
 import {PiListBold, PiXBold} from "react-icons/pi";
 import Logo from "./Logo";
 // import Logo from "/logo/AH.svg";
 
-// const resumeLink = "https://drive.google.com/file/d/1gehlQe2YPRTdhonsauKUUNk8jiTCmhww/view?usp=sharing";  // old
-const resumeLink = "https://drive.google.com/file/d/1CGHVlQJMGg18aga4xPJp3-oojhTcY7PP/view?usp=sharing";  // new
 
-const Header = () => {
+const Header = ({data}) => {
 
     const [menuOpen, setMenuOpen] = useState(false);
     
@@ -19,11 +17,11 @@ const Header = () => {
 
     const handleResumeDownload = () => {
         ReactGA.event({
-          category: "Resume",
-          action: "Download",
-          label: "Resume Download",
+          category: "Button",
+          action: "Click",
+          label: "Download Resume",
         });
-        window.open(resumeLink, "_blank");
+        window.open(data?.resume, "_blank");
       };
      
     return ( 
