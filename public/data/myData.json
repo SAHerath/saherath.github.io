@@ -2,7 +2,7 @@
     "home": {
         "name": "Anuradha Herath",
         "photo": "/images/avatar.png",
-        "titles": ["Full-Stack Developer", "Embedded Systems Engineer", "Hardware Design Engineer", "Electronics R&D Engineer", "IoT Systems Engineer", "Game Developer", "Freelancer"]
+        "titles": ["Front-End Developer", "Embedded Systems Engineer", "Hardware Design Engineer", "IoT Systems Engineer", "Full-Stack Developer", "Freelancer"]
     },
     "about": {
         "bio": [
